@@ -1,0 +1,28 @@
+import tkinter as TK
+from tkinter.ttk import Button, Entry
+mainscreen=TK.Tk()
+WorkingArea=TK.Canvas(mainscreen,height=600,width=500,bg="black").grid(row=1,rowspan=12,column=0,columnspan=200)
+OFile=TK.Button(mainscreen,text="Open File",bg="black",fg="white").grid(row=0,column=0,sticky="W")
+SFile=TK.Button(mainscreen,text="Save File",bg="black",fg="white").grid(row=0,column=1,sticky="W")
+cropS=TK.Button(mainscreen,text="Select Crop",bg="black",fg="white").grid(row=1,column=201)
+cropA=TK.Button(mainscreen,text="Apply Corp",bg="black",fg="white").grid(row=1,column=203)
+flipH=TK.Button(mainscreen,text="Flip Horizontally",bg="black",fg="white").grid(row=2,column=201)
+flipV=TK.Button(mainscreen,text="Flip Vertically",bg="black",fg="white").grid(row=2,column=203)
+BandW=TK.Button(mainscreen,text="Black and White",bg="black",fg="white").grid(row=10,column=201)
+RotL=TK.Button(mainscreen,text="Rotate Left",bg="black",fg="white").grid(row=3,column=201)
+RotR=TK.Button(mainscreen,text="Rotate Right",bg="black",fg="white").grid(row=3,column=203)
+ScSatu=TK.Scale(mainscreen,from_=-100,to=100,orient=TK.HORIZONTAL).grid(row=4,column=201)
+SatuA=TK.Button(mainscreen,text="Apply Saturation",bg="black",fg="white").grid(row=4,column=203)
+ScShar=TK.Scale(mainscreen,from_=0,to=100,orient=TK.HORIZONTAL).grid(row=5,column=201)
+SharA=TK.Button(mainscreen,text="Apply Sharpness",bg="black",fg="white").grid(row=5,column=203)
+ScCont=TK.Scale(mainscreen,from_=-100,to=100,orient=TK.HORIZONTAL).grid(row=6,column=201)
+ContA=TK.Button(mainscreen,text="Apply Contrast",bg="black",fg="white").grid(row=6,column=203)
+ScExpo=TK.Scale(mainscreen,from_=-100,to=100,orient=TK.HORIZONTAL).grid(row=7,column=201)
+ExpoA=TK.Button(mainscreen,text="Apply Exposure",bg="black",fg="white").grid(row=7,column=203)
+HLBorder=TK.Button(mainscreen,text="Highlight Border",bg="black",fg="white").grid(row=8,column=202)
+TextE=TK.Entry(mainscreen,width=30).grid(row=9,column=201,columnspan=3)
+InTex=TK.Button(mainscreen,text="Insert Text",bg="black",fg="white").grid(row=10,column=202)
+FxPos=TK.Button(mainscreen,text="Fix Position",bg="black",fg="white").grid(row=10,column=203)
+mainscreen.mainloop()
+
+
