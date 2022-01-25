@@ -64,12 +64,18 @@ def InvrtC():
 def SAve():
         global RSiz
         RSiz= RSiz.save("save1.jpg")
+def Crp():
+        global RSiz
+        RSiz = RSiz.crop((1,2,300,300))
+        global hi
+        hi=ImageTk.PhotoImage(RSiz)
+        yechap=Label(WorkingArea,image=hi).place(x=1,y=0)
 mainscreen=TK.Tk()
 mainscreen.title("Image Editor(beta version)")
 WorkingArea=TK.Canvas(mainscreen,height=600,width=600,bg="black").grid(row=1,rowspan=12,column=0,columnspan=200)
 OFile=TK.Button(mainscreen,text="Open File",bg="black",fg="white",command=MainOpen).grid(row=5,column=201,sticky="W")
 SFile=TK.Button(mainscreen,text="Save File",bg="black",fg="white",command=SAve).grid(row=5,column=202,sticky="W")
-cropS=TK.Button(mainscreen,text="Select Crop",bg="black",fg="white").grid(row=1,column=202)
+cropS=TK.Button(mainscreen,text="Select Crop",bg="black",fg="white",command=Crp).grid(row=1,column=202)
 flipH=TK.Button(mainscreen,text="Flip Horizontally",bg="black",fg="white",command=FLHor).grid(row=2,column=201)
 flipV=TK.Button(mainscreen,text="Flip Vertically",bg="black",fg="white",command=FLVer).grid(row=2,column=203)
 BandW=TK.Button(mainscreen,text="Black and White",bg="black",fg="white",command=BlkNWht).grid(row=4,column=201)
